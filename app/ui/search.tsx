@@ -19,7 +19,9 @@ export default function Search({ placeholder }: { placeholder: string }) {
       params.set('query',term)
     }else{
       params.delete('query')
+  
     }
+    params.set('page','1')
     replace(`${pathname}?${params.toString()}`)
   },500) //tiempo de espera
   
